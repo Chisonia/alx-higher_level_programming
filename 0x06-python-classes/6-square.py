@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 '''This is square module'''
 
 
@@ -17,7 +17,6 @@ class Square:
     @size.setter
     def size(self, value):
         '''setting the value of size'''
-
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
@@ -27,13 +26,11 @@ class Square:
     @property
     def position(self):
         '''retrieving the position value'''
-
         return self.__position
 
     @position.setter
     def position(self, value):
         '''setting the position'''
-
         if (not isinstance(value, tuple) or len(value) != 2 or
                 not all(isinstance(x, int) for x in value) or
                 not all(x >= 0 for x in value)):
@@ -45,6 +42,7 @@ class Square:
         return self.__size ** 2
 
     def my_print(self):
+        '''print the square with charace #'''
         if self.__size == 0:
             print()
             return
@@ -54,3 +52,8 @@ class Square:
 
         for _ in range(self.__size):
             print(" " * self.__position[0] + "#" * self.__size)
+
+# Example usage:
+if __name__ == "__main__":
+    my_square = Square(3, (1, 1))
+    my_square.my_print()
