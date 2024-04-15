@@ -1,4 +1,8 @@
 #!/usr/bin/python3
-'''This is a Square'''
+'''This is a Square module'''
+
+
 class Square:
-   pass
+    '''This is an empty function'''
+
+    pass
