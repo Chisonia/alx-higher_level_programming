@@ -5,7 +5,7 @@
 class Rectangle:
     '''This represents the rectangle'''
     number_of_instances = 0
-    print_symbol = '#'
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         '''Initialization of class rectangle'''
@@ -58,14 +58,12 @@ class Rectangle:
         return 2 * (self.__width + self.__height)
 
     def __str__(self):
+        '''Printing the rectangle to string'''
+
         if self.__width == 0 or self.__height == 0:
             return ""
-        if isinstance(Rectangle.print_symbol, list):
-            return "\n".join([" ".join(map(
-                str, Rectangle.print_symbol))] * self.__height)
-        else:
-            return "\n".join([
-                str(Rectangle.print_symbol) * self.__width] * self.__height)
+        return "\n".join([
+            str(self.print_symbol) * self.__width] * self.__height)
 
     def __repr__(self):
         return "Rectangle({}, {})".format(self.__width, self.__height)
