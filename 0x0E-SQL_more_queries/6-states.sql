@@ -12,3 +12,4 @@ CREATE TABLE IF NOT EXISTS states(
     name VARCHAR NOT NULL(256),
     PRIMARY KEY (id)
 );
+mysql -u root -p < create_hbtn_0d_usa.sql
