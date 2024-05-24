@@ -8,6 +8,7 @@
 -- Results must be sorted in ascending order by the genre name
 -- You can use a maximum of two SELECT statement
 -- The database name will be passed as an argument of the mysql command
+mysql -u root -p < 16-shows_by_genre.sql
 SELECT name
 FROM tv_genres
 WHERE id NOT IN (
