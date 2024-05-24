@@ -6,6 +6,7 @@
 -- If the database hbtn_0d_usa already exists, your script should not fail
 -- If the table states already exists, your script should not fail
 CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
+SHOW DATABASE;
 USE hbtn_0d_usa;
 CREATE TABLE IF NOT EXISTS unique_id(
     id INT PRIMARY KEY AUTO_INCREMENT UNIQUE NOT NULL ,
